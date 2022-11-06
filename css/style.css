@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #858fad;
+  background-color: #fafbff;
+  background-image: url("/images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem; }
+
+.intro-text {
+  background-image: url("/images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  background-size: contain; }
+  .intro-text__header {
+    font-size: 3rem;
+    color: #293356;
+    font-weight: 800;
+    margin-bottom: 1rem; }
+  .intro-text__para {
+    font-size: 1.8rem; }
+
+.pricing-component {
+  background-color: white;
+  box-shadow: 0 2px 10px black;
+  width: 45%;
+  padding: 4rem 0; }
+  @media (min-width: 300px) and (max-width: 480px) {
+    .pricing-component {
+      width: 90%; } }
+  .pricing-component__upper {
+    padding: 0 5rem 4rem;
+    border-bottom: 1px solid #858fad; }
+    .pricing-component__upper .pricing-per-views {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 3rem; }
+      @media (min-width: 300px) and (max-width: 480px) {
+        .pricing-component__upper .pricing-per-views {
+          grid-template-columns: 1fr; } }
+      .pricing-component__upper .pricing-per-views .page-views {
+        font-size: 2rem; }
+      .pricing-component__upper .pricing-per-views .pricing {
+        display: flex;
+        gap: 1rem;
+        align-items: center; }
+        .pricing-component__upper .pricing-per-views .pricing .pricing__amount {
+          font-size: 4rem;
+          color: #293356;
+          font-weight: 800; }
+        .pricing-component__upper .pricing-per-views .pricing .pricing__duration {
+          font-size: 2rem; }
+    .pricing-component__upper .slidecontainer {
+      grid-column: 1/3;
+      width: 100%;
+      margin-bottom: 5rem; }
+      .pricing-component__upper .slidecontainer .slider {
+        width: 100%;
+        height: 1.2rem;
+        outline: none;
+        appearance: none;
+        background-color: #eaeefb; }
+      .pricing-component__upper .slidecontainer .slider::-webkit-slider-thumb {
+        appearance: none;
+        background-color: #10d5c2;
+        background-image: url("/images/icon-slider.svg");
+        background-repeat: no-repeat;
+        background-position: 40% 50%;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        cursor: pointer; }
+    .pricing-component__upper .billing {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem; }
+      .pricing-component__upper .billing .switch {
+        position: relative;
+        display: block;
+        width: 5rem;
+        height: 2.5rem;
+        background-color: #cdd7ee;
+        border-radius: 2rem; }
+      .pricing-component__upper .billing .checkbox {
+        opacity: 0;
+        width: 0;
+        height: 0; }
+      .pricing-component__upper .billing .toggle-slider {
+        position: absolute;
+        top: 8%;
+        left: 5%;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        background-color: white;
+        transition: all 0.4s; }
+      .pricing-component__upper .billing .toggle-active {
+        background-color: #10d5c2; }
+      .pricing-component__upper .billing .checkbox:checked + .toggle-slider {
+        transform: translateX(120%); }
+      .pricing-component__upper .billing .yearly::after {
+        content: "25% discount";
+        position: absolute;
+        padding: 0.2rem;
+        color: #ff8c66;
+        background-color: #feece7;
+        transform: translateX(10%); }
+  .pricing-component__lower {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 5rem 0; }
+    .pricing-component__lower .features {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem; }
+      .pricing-component__lower .features .individual-feature {
+        display: flex;
+        align-items: center;
+        gap: 1rem; }
+    .pricing-component__lower button {
+      border: none;
+      cursor: pointer;
+      background: none;
+      background-color: #293356;
+      color: white;
+      padding: 2rem 5rem;
+      border-radius: 4rem;
+      font: inherit; }

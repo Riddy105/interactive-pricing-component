@@ -1,0 +1,11 @@
+// Abstracts files
+
+@import "./abstracts/functions", "./abstracts/mixins", "./abstracts/variables";
+
+//Base files
+
+@import "./base/reset", "./base/typography";
+
+//Components files
+
+@import "./components/pricing";
