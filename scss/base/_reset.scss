@@ -22,4 +22,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 5rem;
+  @include for-phone-only {
+    background-size: cover;
+  }
 }

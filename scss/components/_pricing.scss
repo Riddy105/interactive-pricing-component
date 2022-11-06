@@ -3,15 +3,20 @@
   background-repeat: no-repeat;
   background-position: 50% 40%;
   background-size: contain;
+  text-align: center;
 
   &__header {
     font-size: 3rem;
     color: $ctaBackground;
     font-weight: $boldFont;
     margin-bottom: 1rem;
+    @include for-phone-only {
+      font-size: 2rem;
+    }
   }
   &__para {
     font-size: 1.8rem;
+    padding: 0 5rem;
   }
 }
 .pricing-component {
@@ -24,7 +29,10 @@
   }
   &__upper {
     padding: 0 5rem 4rem;
-    border-bottom: 1px solid $textColor;
+    border-bottom: 1px solid $toggleBackground;
+    @include for-phone-only {
+      padding: 0 2rem 4rem;
+    }
     .pricing-per-views {
       display: grid;
       // justify-items: end;
@@ -33,6 +41,8 @@
       row-gap: 3rem;
       @include for-phone-only {
         grid-template-columns: 1fr;
+        justify-items: center;
+        margin-bottom: 3rem;
       }
       .page-views {
         font-size: 2rem;
@@ -41,6 +51,9 @@
         display: flex;
         gap: 1rem;
         align-items: center;
+        @include for-phone-only {
+          grid-row: 3;
+        }
         .pricing__amount {
           font-size: 4rem;
           color: $ctaBackground;
@@ -55,12 +68,16 @@
       grid-column: 1/3;
       width: 100%;
       margin-bottom: 5rem;
+      @include for-phone-only {
+        margin-bottom: 0;
+      }
       .slider {
         width: 100%;
         height: 1.2rem;
         outline: none;
         appearance: none;
         background-color: $emptySliderBar;
+        border-radius: 0.5rem;
       }
       .slider::-webkit-slider-thumb {
         appearance: none;
@@ -80,6 +97,9 @@
       justify-content: center;
       align-items: center;
       gap: 1rem;
+      @include for-phone-only {
+        justify-content: flex-start;
+      }
       .switch {
         position: relative;
         display: block;
@@ -117,6 +137,10 @@
         color: $discountText;
         background-color: $discountBackground;
         transform: translateX(10%);
+        border-radius: 1rem;
+        @include for-phone-only {
+          content: "-25%";
+        }
       }
     }
   }
@@ -125,10 +149,16 @@
     align-items: center;
     justify-content: space-between;
     padding: 3rem 5rem 0;
+    @include for-phone-only {
+      padding: 3rem 0 0;
+      flex-direction: column;
+      gap: 2rem;
+    }
     .features {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+      align-items: center;
       .individual-feature {
         display: flex;
         align-items: center;
@@ -144,6 +174,9 @@
       padding: 2rem 5rem;
       border-radius: 4rem;
       font: inherit;
+      @include for-phone-only {
+        padding: 1.5rem 5rem;
+      }
     }
   }
 }

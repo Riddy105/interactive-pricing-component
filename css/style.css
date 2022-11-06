@@ -22,19 +22,27 @@ body {
   justify-content: center;
   align-items: center;
   gap: 5rem; }
+  @media (min-width: 300px) and (max-width: 480px) {
+    body {
+      background-size: cover; } }
 
 .intro-text {
   background-image: url("/images/pattern-circles.svg");
   background-repeat: no-repeat;
   background-position: 50% 40%;
-  background-size: contain; }
+  background-size: contain;
+  text-align: center; }
   .intro-text__header {
     font-size: 3rem;
     color: #293356;
     font-weight: 800;
     margin-bottom: 1rem; }
+    @media (min-width: 300px) and (max-width: 480px) {
+      .intro-text__header {
+        font-size: 2rem; } }
   .intro-text__para {
-    font-size: 1.8rem; }
+    font-size: 1.8rem;
+    padding: 0 5rem; }
 
 .pricing-component {
   background-color: white;
@@ -46,7 +54,10 @@ body {
       width: 90%; } }
   .pricing-component__upper {
     padding: 0 5rem 4rem;
-    border-bottom: 1px solid #858fad; }
+    border-bottom: 1px solid #cdd7ee; }
+    @media (min-width: 300px) and (max-width: 480px) {
+      .pricing-component__upper {
+        padding: 0 2rem 4rem; } }
     .pricing-component__upper .pricing-per-views {
       display: grid;
       align-items: center;
@@ -54,13 +65,18 @@ body {
       row-gap: 3rem; }
       @media (min-width: 300px) and (max-width: 480px) {
         .pricing-component__upper .pricing-per-views {
-          grid-template-columns: 1fr; } }
+          grid-template-columns: 1fr;
+          justify-items: center;
+          margin-bottom: 3rem; } }
       .pricing-component__upper .pricing-per-views .page-views {
         font-size: 2rem; }
       .pricing-component__upper .pricing-per-views .pricing {
         display: flex;
         gap: 1rem;
         align-items: center; }
+        @media (min-width: 300px) and (max-width: 480px) {
+          .pricing-component__upper .pricing-per-views .pricing {
+            grid-row: 3; } }
         .pricing-component__upper .pricing-per-views .pricing .pricing__amount {
           font-size: 4rem;
           color: #293356;
@@ -71,12 +87,16 @@ body {
       grid-column: 1/3;
       width: 100%;
       margin-bottom: 5rem; }
+      @media (min-width: 300px) and (max-width: 480px) {
+        .pricing-component__upper .slidecontainer {
+          margin-bottom: 0; } }
       .pricing-component__upper .slidecontainer .slider {
         width: 100%;
         height: 1.2rem;
         outline: none;
         appearance: none;
-        background-color: #eaeefb; }
+        background-color: #eaeefb;
+        border-radius: 0.5rem; }
       .pricing-component__upper .slidecontainer .slider::-webkit-slider-thumb {
         appearance: none;
         background-color: #10d5c2;
@@ -92,6 +112,9 @@ body {
       justify-content: center;
       align-items: center;
       gap: 1rem; }
+      @media (min-width: 300px) and (max-width: 480px) {
+        .pricing-component__upper .billing {
+          justify-content: flex-start; } }
       .pricing-component__upper .billing .switch {
         position: relative;
         display: block;
@@ -122,16 +145,26 @@ body {
         padding: 0.2rem;
         color: #ff8c66;
         background-color: #feece7;
-        transform: translateX(10%); }
+        transform: translateX(10%);
+        border-radius: 1rem; }
+        @media (min-width: 300px) and (max-width: 480px) {
+          .pricing-component__upper .billing .yearly::after {
+            content: "-25%"; } }
   .pricing-component__lower {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 3rem 5rem 0; }
+    @media (min-width: 300px) and (max-width: 480px) {
+      .pricing-component__lower {
+        padding: 3rem 0 0;
+        flex-direction: column;
+        gap: 2rem; } }
     .pricing-component__lower .features {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem; }
+      gap: 1.5rem;
+      align-items: center; }
       .pricing-component__lower .features .individual-feature {
         display: flex;
         align-items: center;
@@ -145,3 +178,6 @@ body {
       padding: 2rem 5rem;
       border-radius: 4rem;
       font: inherit; }
+      @media (min-width: 300px) and (max-width: 480px) {
+        .pricing-component__lower button {
+          padding: 1.5rem 5rem; } }
